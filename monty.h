@@ -3,6 +3,9 @@
 
 #include <stddef.h>
 #include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<unistd.h>
 
 
 /**
@@ -38,5 +41,6 @@ typedef struct instruction_s
 
 void pall(stack_t *stack, unsigned int nums);
 void push(int ac, int *av);
+void pint(stack_t **stack, unsigned int line_number);
 
 #endif
