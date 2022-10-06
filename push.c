@@ -2,9 +2,15 @@
 #include <stdlib.h>
 
 /*
+<<<<<<< HEAD
  * push - pushes an element to the stack.
  * @stack: checks if it's an integer
  * @line_nums: string convert to int
+=======
+ * _push - pushes an element to the stack.
+ * @ac: checks if it's an integer
+ * @av: string convert to int
+>>>>>>> 0999a75921618a4b411ada9c86fb64474ce19540
  */
 void push(stack_t **stack, unsigned int line_nums)
 {
