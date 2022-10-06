@@ -3,17 +3,31 @@
 
 /*
  * push - pushes an element to the stack.
- * @ac: checks if it's an integer
- * @av: string convert to int
+ * @stack: checks if it's an integer
+ * @line_nums: string convert to int
  */
-void push(int ac, int *av)
+void push(stack_t **stack, unsigned int line_nums)
 {
-	stack_t *stack;
-	stack == NULL;
+	char *n = global.argument;
 
-	if(ac != 5)
+	if ((is_digit(n)) == 0)
 	{
-		printf("L<line_number>: usage: push integer\n");
+		fprintf(stderr, "L%d: usage: push integer\n", line_nums);
+		exit(EXIT_FAILURE);
+	}
+
+	if (global.data_struct == 1)
+	{
+		if (!node_add(stack, atoi(global.argument)))
+		{
 			exit(EXIT_FAILURE);
+		}
+	}
+	else
+	{
+		if (!queue_node(stack, atoi(global.argument)))
+		{
+			exit(EXIT_FAILURE);
+		}
 	}
 }

@@ -9,16 +9,26 @@
 #include <ctype.h>
 
 
-#define Instructions
-		("push", push),	\
-		("pall", pall),	\
-		("pint", pin),	\
-		("pop", pop),	\
-		("swap", swap),	\
-		("nop", nop),	\
-
-	{
-		NULL, NULL
+#define INSTRUCTIONS		    \
+	{			     \
+		{"push", push},       \
+		    {"pall", pall},   \
+		    {"pint", pint},   \
+		    {"pop", pop},     \
+		    {"swap", swap},   \
+		    {"nop", nop},     \
+		    {"div", div},    \
+		    {"mul", mul},    \
+		    {"add", add},    \
+		    {"sub", sub},    \
+		    {"mod", mod},     \
+		    {"pchar", pchar}, \
+		    {"pstr", pstr},   \
+		    {"rotl", rotl},   \
+		    {"rotr", rotr},   \
+		{		      \
+			NULL, NULL	\
+		}                     \
 	}
 
 /**
@@ -74,7 +84,6 @@ void pop(stack_t **stack, unsigned int line_nums);
 void nop(stack_t **stack, unsigned int line_nums);
 
 void opcode(stack_t **stack, char *str, unsigned int line_nums);
-
 
 
 #endif /* MONTY_H */

@@ -5,10 +5,10 @@
  * @stack: stores the data
  * @line_number: num of instructions
  */
-void pall(stack_t **stack, unsigned int line_number)
+void pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *temp = NULL;
-	int i = 0;
+	int n = 0;
 
 	if(*stack == NULL)
 		return;
@@ -17,8 +17,8 @@ void pall(stack_t **stack, unsigned int line_number)
 
 	while (temp)
 	{
-		i = temp->i;
-		printf("%d\n", i);
-		temp = temp->next;
+		n=temp->n;
+		printf("%d\n", n);
+		temp=temp->next;
 	}
 }

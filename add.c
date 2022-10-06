@@ -9,7 +9,7 @@ void add(stack_t **stack, unsigned int line_nums)
 {
 	int sum;
 
-	if(sum < 2)
+	if (!stack || !*stack || !((*stack)->next))
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_nums);
 		exit(EXIT_FAILURE);
