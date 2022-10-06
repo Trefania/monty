@@ -3,10 +3,23 @@
 
 #include <stddef.h>
 #include <stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <ctype.h>
 
+
+#define Instructions
+		("push", push),	\
+		("pall", pall),	\
+		("pint", pin),	\
+		("pop", pop),	\
+		("swap", swap),	\
+		("nop", nop),	\
+
+	{
+		NULL, NULL
+	}
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -39,13 +52,29 @@ typedef struct instruction_s
 } instruction_t;
 
 
-void pall(stack_t *stack, unsigned int nums);
-void push(int ac, int *av);
+
+/**
+ * struct help - argument for the current opcode
+ * @data_struct: stack mode, stack (default) and queue
+ * @argument: the arguments of the string
+ *
+ * Description: global structure used to pass data around the functions easily
+ */
+typedef struct help
+{
+	int data_struct;
+	char *argument;
+} help;
+help global;
+
+void push(stack_t **stack, unsigned int line_nums);
+void pall(stack_t **stack, unsigned int line_nums);
 void pint(stack_t **stack, unsigned int line_nums);
-void nop(stack_t **stack, unsigned int line_nums);
 void pop(stack_t **stack, unsigned int line_nums);
+void nop(stack_t **stack, unsigned int line_nums);
+
+void opcode(stack_t **stack, char *str, unsigned int line_nums);
 
 
 
-
-#endif
+#endif /* MONTY_H */

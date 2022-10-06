@@ -5,7 +5,7 @@
  * @stack: doesn't matter
  * @line_nums: for nothing
  *
- * Return: nothing
+ * Return: Nothing
  */
 void nop(stack_t **stack, unsigned int line_nums)
 {
