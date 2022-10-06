@@ -2,12 +2,8 @@
 #define MONTY_H
 
 #include <stddef.h>
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 #include <ctype.h>
-
 
 #define INSTRUCTIONS		    \
 	{			     \
@@ -17,10 +13,10 @@
 		    {"pop", pop},     \
 		    {"swap", swap},   \
 		    {"nop", nop},     \
-		    {"div", div},    \
-		    {"mul", mul},    \
-		    {"add", add},    \
-		    {"sub", sub},    \
+		    {"div", _div},    \
+		    {"mul", _mul},    \
+		    {"add", _add},    \
+		    {"sub", _sub},    \
 		    {"mod", mod},     \
 		    {"pchar", pchar}, \
 		    {"pstr", pstr},   \
@@ -42,9 +38,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -57,11 +53,9 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
-
 
 /**
  * struct help - argument for the current opcode
@@ -86,11 +80,24 @@ size_t print_stack(const stack_t *stack);
 void push(stack_t **stack, unsigned int line_nums);
 void pall(stack_t **stack, unsigned int line_nums);
 void pint(stack_t **stack, unsigned int line_nums);
+void swap(stack_t **stack, unsigned int line_nums);
 void pop(stack_t **stack, unsigned int line_nums);
 void nop(stack_t **stack, unsigned int line_nums);
-void swap(stack_t **stack, unsigned int line_nums);
+
+void _div(stack_t **stack, unsigned int line_nums);
+void _add(stack_t **stack, unsigned int line_nums);
+void _sub(stack_t **stack, unsigned int line_nums);
+void _mul(stack_t **stack, unsigned int line_nums);
+void mod(stack_t **stack, unsigned int line_nums);
+
+void pchar(stack_t **stack, unsigned int line_nums);
+void pstr(stack_t **stack, unsigned int line_nums);
+void rotl(stack_t **stack, unsigned int line_count);
+void rotr(stack_t **stack, unsigned int line_count);
 
 void opcode(stack_t **stack, char *str, unsigned int line_nums);
 
+int is_digit(char *string);
+int isnumber(char *str);
 
 #endif /* MONTY_H */
