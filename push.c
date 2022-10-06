@@ -7,17 +7,17 @@
 /**
  * push - push element into the stack
  * @stack: stack given by main
- * @line_nums: amount of lines
+ * @line_cnt: amount of lines
  *
  * Return: void
  */
-void push(stack_t **stack, unsigned int line_nums)
+void push(stack_t **stack, unsigned int line_cnt)
 {
 	char *n = global.argument;
 
 	if ((is_digit(n)) == 0)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_nums);
+		fprintf(stderr, "L%d: usage: push integer\n", line_cnt);
 		exit(EXIT_FAILURE);
 	}
 

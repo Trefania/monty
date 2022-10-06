@@ -7,11 +7,11 @@
  * opcode - function in charge of running builtins
  * @stack: stack given by main
  * @str: string to compare
- * @line_nums: amount of lines
+ * @line_cnt: amount of lines
  *
  * Return: nothing
  */
-void opcode(stack_t **stack, char *str, unsigned int line_nums)
+void opcode(stack_t **stack, char *str, unsigned int line_cnt)
 {
 	int i = 0;
 
@@ -33,7 +33,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_nums)
 	{
 		if (strcmp(op[i].opcode, str) == 0)
 		{
-			op[i].f(stack, line_nums);
+			op[i].f(stack, line_cnt);
 			return; /* if we found a match, run the function */
 		}
 		i++;
