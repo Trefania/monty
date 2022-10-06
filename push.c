@@ -5,6 +5,10 @@
  * push - pushes an element to the stack.
  * @stack: checks if it's an integer
  * @line_nums: string convert to int
+ * @add_node: adding node
+ * @queue_node: checking in stack
+ *
+ * Return: void
  */
 void push(stack_t **stack, unsigned int line_nums)
 {

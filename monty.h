@@ -77,11 +77,18 @@ typedef struct help
 } help;
 help global;
 
+/* stack utility functions available in linked_list.c */
+stack_t *add_node(stack_t **stack, const int n);
+stack_t *queue_node(stack_t **stack, const int n);
+void free_stack(stack_t *stack);
+size_t print_stack(const stack_t *stack);
+
 void push(stack_t **stack, unsigned int line_nums);
 void pall(stack_t **stack, unsigned int line_nums);
 void pint(stack_t **stack, unsigned int line_nums);
 void pop(stack_t **stack, unsigned int line_nums);
 void nop(stack_t **stack, unsigned int line_nums);
+void swap(stack_t **stack, unsigned int line_nums);
 
 void opcode(stack_t **stack, char *str, unsigned int line_nums);
 
