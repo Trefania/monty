@@ -1,7 +1,7 @@
 #include"monty.h"
 
 /**
- *_
+ *
  *
  *
  */
@@ -16,7 +16,7 @@ void swap(stack_t **stack, unsigned int line_nums)
 	}
 
 	temp = ((*stack)->next->n);
-	atoi((*stack)->next->n) = atoi((*stack)->n);
+	((*stack)->next->n) = ((*stack)->n);
 	add(stack, line_nums);
 }
 

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /*
- * pall - prints all the values on the stack, top to bottom
+ * _pall - prints all the values on the stack, top to bottom
  * @stack: stores the data
  * @line_number: num of instructions
  */

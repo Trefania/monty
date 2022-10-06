@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /*
- * push - pushes an element to the stack.
+ * _push - pushes an element to the stack.
  * @ac: checks if it's an integer
  * @av: string convert to int
  */

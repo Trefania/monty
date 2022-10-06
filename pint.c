@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pint - prints value top of the stack
+ * _pint - prints value top of the stack
  * @stack: stores the data
  * line_nums: number of instructions 
  */
