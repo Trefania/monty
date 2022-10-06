@@ -1,8 +1,8 @@
 #include"monty.h"
 
 /**
- *
- *
+ *swap - swaps first two elemnts
+ *@temp: integer storage
  *
  */
 
