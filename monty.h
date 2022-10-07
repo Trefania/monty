@@ -80,7 +80,8 @@ void nop(stack_t **stack, unsigned int line_nums);
 void add(stack_t **stack, unsigned int line_nums);
 void opcode(stack_t **stack, char *str, unsigned int line_nums);
 void mod(stack_t **stack, unsigned int line_nums);
-void div(stack_t **stack, unsigned int line_nums);
+/* void div(stack_t **stack, unsigned int line_nums); */
+/*void pchar(stack_t **stack, unsigned int line_nums); */
 void pstr(stack_t **stack, unsigned int line_nums __attribute__((unused)));
 void rotr(stack_t **stack, unsigned int line_nums);
 void sub(stack_t **stack, unsigned int line_nums);
