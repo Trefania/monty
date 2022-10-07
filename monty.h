@@ -15,7 +15,7 @@
 		    {"pop", pop},     \
 		    {"swap", swap},   \
 		    {"nop", nop},     \
-		    {"add", _add},	\
+		    {"add", add},	\
 		{		      \
 			NULL, NULL	\
 		}                     \

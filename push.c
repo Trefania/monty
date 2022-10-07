@@ -10,7 +10,7 @@ void push(stack_t **stack, unsigned int line_nums)
 {
 	char *n = global.argument;
 
-	if ((is_number(n)) == 0)
+	if ((is_digit(n)) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_nums);
 		exit(EXIT_FAILURE);
