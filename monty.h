@@ -98,6 +98,7 @@ void pstr(stack_t **stack, unsigned int line_nums __attribute__((unused)));
 void rotr(stack_t **stack, unsigned int line_nums);
 void sub(stack_t **stack, unsigned int line_nums);
 
+
 int is_digit(char *string);
 int isnumber(char *str);
 
