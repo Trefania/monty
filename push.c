@@ -1,23 +1,18 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
 #include "monty.h"
 
 /**
  * push - push element into the stack
  * @stack: stack given by main
- * @line_cnt: amount of lines
- *
+ * @line_nums: amount of lines
  * Return: void
  */
-void push(stack_t **stack, unsigned int line_cnt)
+void push(stack_t **stack, unsigned int line_nums)
 {
 	char *n = global.argument;
 
-	if ((is_digit(n)) == 0)
+	if ((is_number(n)) == 0)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_cnt);
+		fprintf(stderr, "L%d: usage: push integer\n", line_nums);
 		exit(EXIT_FAILURE);
 	}
 

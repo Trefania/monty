@@ -4,6 +4,8 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
+#include <stdio.h>
 
 #define INSTRUCTIONS		    \
 	{			     \
@@ -13,15 +15,7 @@
 		    {"pop", pop},     \
 		    {"swap", swap},   \
 		    {"nop", nop},     \
-		    {"div", _div},    \
-		    {"mul", _mul},    \
-		    {"add", _add},    \
-		    {"sub", _sub},    \
-		    {"mod", mod},     \
-		    {"pchar", pchar}, \
-		    {"pstr", pstr},   \
-		    {"rotl", rotl},   \
-		    {"rotr", rotr},   \
+		    {"add", _add},	\
 		{		      \
 			NULL, NULL	\
 		}                     \
@@ -83,18 +77,7 @@ void pint(stack_t **stack, unsigned int line_nums);
 void swap(stack_t **stack, unsigned int line_nums);
 void pop(stack_t **stack, unsigned int line_nums);
 void nop(stack_t **stack, unsigned int line_nums);
-
-void _div(stack_t **stack, unsigned int line_nums);
-void _add(stack_t **stack, unsigned int line_nums);
-void _sub(stack_t **stack, unsigned int line_nums);
-void _mul(stack_t **stack, unsigned int line_nums);
-void mod(stack_t **stack, unsigned int line_nums);
-
-void pchar(stack_t **stack, unsigned int line_nums);
-void pstr(stack_t **stack, unsigned int line_nums);
-void rotl(stack_t **stack, unsigned int line_count);
-void rotr(stack_t **stack, unsigned int line_count);
-
+void add(stack_t **stack, unsigned int line_nums);
 void opcode(stack_t **stack, char *str, unsigned int line_nums);
 
 int is_digit(char *string);

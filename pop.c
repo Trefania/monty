@@ -1,30 +1,26 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
 #include "monty.h"
 
 /**
  * pop - pops the very top element of the stack
  * @stack: stack given by main in start.c
- * @line_cnt: line number for error messages
+ * @line_nums: line nums of errors
  *
  * Return: void
  */
-void pop(stack_t **stack, unsigned int line_cnt)
+void pop(stack_t **stack, unsigned int line_nums)
 {
-	stack_t *tmp = NULL;
+	stack_t *a = NULL;
 
 	if (!stack || !*stack)
 	{
-		fprintf(stderr, "L%u: can't pop an empty stack\n", line_cnt);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_nums);
 		exit(EXIT_FAILURE);
 	}
 
-	tmp = (*stack)->next;
+	a = (*stack)->next;
 	free(*stack);
-	*stack = tmp;
+	*stack = a;
 	if (!*stack)
-		return; /* prevents errors cause next line might assign a NULL */
+		return;
 	(*stack)->prev = NULL;
 }
