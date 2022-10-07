@@ -8,7 +8,6 @@
  * mod - computes the remainder of the division
  * @stack: stack given by main
  * @line_nums: line counter
- *
  * Return: void
  */
 void mod(stack_t **stack, unsigned int line_nums)
