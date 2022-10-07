@@ -11,7 +11,7 @@
  *
  * Return: void
  */
-void div(stack_t **stack, unsigned int line_nums)
+void _div(stack_t **stack, unsigned int line_nums)
 {
 	int result;
 

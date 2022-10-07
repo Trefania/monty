@@ -6,6 +6,10 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdio.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<sys/types.h>
+#include<sys/stat.h>
 
 #define INSTRUCTIONS		    \
 	{			     \
@@ -16,6 +20,13 @@
 		    {"swap", swap},   \
 		    {"nop", nop},     \
 		    {"add", add},	\
+			{"sub", sub},  \
+			{"mod", mod},	\
+			{"pchar", pchar} \
+			{"pstr", pstr}, \
+			{"rotl", rotl}, \
+			{"rotr", rotr}, \	
+		
 		{		      \
 			NULL, NULL	\
 		}                     \
