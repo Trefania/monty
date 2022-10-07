@@ -19,10 +19,10 @@
 		    {"pop", pop},     \
 		    {"swap", swap},   \
 		    {"nop", nop},     \
-		    {"div", _div},    \
-		    {"mul", _mul},    \
-		    {"add", _add},    \
-		    {"sub", _sub},    \
+		    {"div", div},    \
+		    {"mul", mul},    \
+		    {"add", add},    \
+		    {"sub", sub},    \
 		    {"mod", mod},     \
 		    {"pchar", pchar}, \
 		    {"pstr", pstr},   \
