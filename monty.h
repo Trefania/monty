@@ -20,7 +20,7 @@
 		    {"swap", swap},   \
 		    {"nop", nop},     \
 		    {"div", _div},    \
-		    {"mul", mul},    \
+		    {"mul", _mul},    \
 		    {"add", add},    \
 		    {"sub", sub},    \
 		    {"mod", mod},     \
@@ -97,6 +97,7 @@ void pchar(stack_t **stack, unsigned int line_nums);
 void pstr(stack_t **stack, unsigned int line_nums __attribute__((unused)));
 void rotr(stack_t **stack, unsigned int line_nums);
 void sub(stack_t **stack, unsigned int line_nums);
+void _mul(stack_t **stack, unsigned int line_nums);
 
 int is_digit(char *string);
 int isnumber(char *str);
