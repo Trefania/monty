@@ -20,7 +20,7 @@ void pchar(stack_t **stack, unsigned int line_nums)
 		return;
 
 	}
-	if (isascii((*stack)->n) == 0)
+	if (((*stack)->n) == 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_nums);
 		exit(EXIT_FAILURE);
