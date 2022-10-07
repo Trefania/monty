@@ -2,8 +2,8 @@
 
 /**
  * add -  adds the first two nodes of the stack
- * @stack: stack given by main
- * @line_nums: line counter
+ * @stack: stack given by main.
+ * @line_nums: line counter.
  * Return: void
  */
 void add(stack_t **stack, unsigned int line_nums)

@@ -84,6 +84,16 @@ void div(stack_t **stack, unsigned int line_nums);
 void pstr(stack_t **stack, unsigned int line_nums __attribute__((unused)));
 void rotr(stack_t **stack, unsigned int line_nums);
 void sub(stack_t **stack, unsigned int line_nums);
+int is_digit(char *string);
+int isnumber(char *str);
+void rotl(stack_t **stack, unsigned int line_nums);
+stack_t *queue_node(stack_t **stack, const int n);
+void free_stack(stack_t *stack);
+size_t print_stack(const stack_t *stack);
+void error_usage(void);
+void file_error(char *argv);
+int main(int argc, char **argv);
+void pchar(stack_t **stack, unsigned int line_nums);
 
 int is_digit(char *string);
 int isnumber(char *str);

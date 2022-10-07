@@ -3,7 +3,7 @@
 /**
 * rotl - rotates the first element of the stack
 * @stack: stack head
-* @line_nums: line count
+* @line_nums: number of lines
 *
 * Return: void
 */
